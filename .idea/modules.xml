@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ProgrammingSecondGrade.iml" filepath="$PROJECT_DIR$/ProgrammingSecondGrade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleLabs/SimpleLabs.iml" filepath="$PROJECT_DIR$/SimpleLabs/SimpleLabs.iml" />
+    </modules>
+  </component>
+</project>
