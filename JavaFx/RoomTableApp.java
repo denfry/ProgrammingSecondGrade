@@ -54,15 +54,11 @@ public class RoomTableApp extends Application {
     }
 
     private void addRoom() {
-        // Здесь вы можете добавить код для добавления новой комнаты в таблицу.
-        // Пример:
         rooms.add(new ResidentialRoom("Новая комната", 25.0, 2, true, "Центральное"));
         rooms.add(new ResidentialRoom("Новая комната 1", 22.0, 1, false, "Электрическое"));
     }
 
     private void sortRoomsByArea() {
-        // Здесь вы можете добавить код для сортировки комнат по площади.
-        // Пример:
         rooms.sort(Comparator.comparingDouble(Room::getArea));
     }
 }
