@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         List<Room> rooms = new ArrayList<>();
         rooms.add(new ResidentialRoom("Спальня", 20.5, 1, true, "Центральное"));
         rooms.add(new ResidentialRoom("Гостиная", 30.0, 0, false, "Нет"));
@@ -14,12 +15,17 @@ public class Main {
         ResidentialRoom smallestResidentialRoom = findSmallestResidentialRoom(rooms);
         if (smallestResidentialRoom != null) {
             System.out.println("Самое маленькое жилое помещение: " + smallestResidentialRoom.getName());
+            System.out.println("Нужно ли вывести полную информацию? (да/нет)");
+            String response_smallest = scanner.nextLine();
+            if (response_smallest.equals("да")) {
+                System.out.println(smallestResidentialRoom);
+            }
+
         } else {
             System.out.println("Жилых помещений не найдено.");
         }
 
 
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите назначение, которое нужно найти: ");
         String targetPurpose = scanner.nextLine();
 
@@ -29,6 +35,13 @@ public class Main {
         if (!matchingNonResidentialRooms.isEmpty()) {
             for (NonResidentialRoom room : matchingNonResidentialRooms) {
                 System.out.println(room.getName());
+                System.out.println("Нужно ли вывести полную информацию? (да/нет)");
+                String response = scanner.nextLine();
+                if (response.equals("да")) {
+                    System.out.println(room);
+                } else {
+                    System.out.println("Программа завершена.");
+                }
             }
         } else {
             System.out.println("Нежилых помещений с заданным назначением не найдено.");

@@ -1,7 +1,7 @@
 package lab1;
 
 class NonResidentialRoom extends Room {
-    private final String purpose;
+    private String purpose;
 
     public NonResidentialRoom(String name, double area, String purpose) {
         super(name, area);
@@ -10,6 +10,9 @@ class NonResidentialRoom extends Room {
 
     public String getPurpose() {
         return purpose;
+    }
+    public void setPurpose(String purpose) {
+        this.purpose = purpose;
     }
 
     @Override

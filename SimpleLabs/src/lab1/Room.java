@@ -1,8 +1,8 @@
 package lab1;
 
 public class Room {
-    private final String name;
-    private final int area;
+    private String name;
+    private int area;
 
     public Room(String name, double area) {
         this.name = name;
@@ -17,7 +17,13 @@ public class Room {
         return area;
     }
 
-    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setArea(int area) {
+        this.area = area;
+    }
     public String toString() {
         return "Помещение: " + name + ", площадь: " + area + " м2";
     }

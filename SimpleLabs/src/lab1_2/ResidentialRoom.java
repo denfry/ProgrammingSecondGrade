@@ -1,4 +1,4 @@
-package lab1_1;
+package lab1_2;
 
 class ResidentialRoom extends Room implements InfoProvider {
     private final int numberOfBathrooms;
@@ -10,6 +10,15 @@ class ResidentialRoom extends Room implements InfoProvider {
         this.numberOfBathrooms = numberOfBedrooms;
         this.hasBalcony = hasBalcony;
         this.heatingType = heatingType;
+    }
+    public int getNumberOfBathrooms() {
+        return numberOfBathrooms;
+    }
+    public boolean hasBalcony() {
+        return hasBalcony;
+    }
+    public String getHeatingType() {
+        return heatingType;
     }
 
     @Override

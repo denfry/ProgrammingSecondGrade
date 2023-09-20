@@ -1,4 +1,4 @@
-package lab1_1;
+package lab1_2;
 
 class NonResidentialRoom extends Room implements InfoProvider {
     private final String purpose;

@@ -1,4 +1,4 @@
-package lab1_1;
+package lab1_2;
 
 abstract class Room {
     private final String name;
