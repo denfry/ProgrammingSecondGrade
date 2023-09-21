@@ -1,15 +1,17 @@
-package lab1;
+package lab1_1;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Room> rooms = new ArrayList<>();
-        rooms.add(new ResidentialRoom("Спальня", 20.5, 1, true, "Центральное"));
-        rooms.add(new ResidentialRoom("Гостиная", 30.0, 0, false, "Электрическое"));
-        rooms.add(new ResidentialRoom("Детская", 15.0, 2, true, "Нет"));
-        rooms.add(new ResidentialRoom("Кухня", 12.0, 0, true, "Нет"));
+        rooms.add(new ResidentialRoom("Спальня", 20.5, 1));
+        rooms.add(new ResidentialRoom("Гостиная", 30.0, 0));
+        rooms.add(new ResidentialRoom("Детская", 15.0, 2));
+        rooms.add(new ResidentialRoom("Кухня", 12.0, 0));
         rooms.add(new NonResidentialRoom("Офис", 50.0, "Рабочее помещение"));
         rooms.add(new NonResidentialRoom("Кабинет", 25.0, "Рабочее помещение"));
         rooms.add(new NonResidentialRoom("Склад", 100.0, "Хранение товаров"));

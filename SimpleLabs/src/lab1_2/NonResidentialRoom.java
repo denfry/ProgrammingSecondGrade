@@ -1,19 +1,36 @@
 package lab1_2;
 
-class NonResidentialRoom extends Room implements InfoProvider {
-    private final String purpose;
-
+public class NonResidentialRoom implements IRoom {
+    private String name;
+    private double area;
+    private String purpose;
     public NonResidentialRoom(String name, double area, String purpose) {
-        super(name, area);
+        this.name = name;
+        this.area = area;
         this.purpose = purpose;
     }
 
     @Override
-    public String getInfo() {
-        return "Нежилое помещение: " + getName() + ", Площадь: " + getArea() + " кв. м, Назначение: " + purpose;
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public double getArea() {
+        return area;
     }
 
     public String getPurpose() {
         return purpose;
+    }
+
+    @Override
+    public String getDescription() {
+        return "Нежилое помещение: " + getName() + "\nПлощадь: " + getArea() + " кв. м" + "\nНазначение: " + purpose;
+    }
+
+    @Override
+    public boolean hasPurpose(String purpose) {
+        return purpose.equals(this.purpose);
     }
 }
