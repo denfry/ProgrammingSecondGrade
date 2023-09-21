@@ -31,18 +31,16 @@ public class ResidentialRoom implements IRoom {
         return "Room name: " + getName() + "\nArea: " + getArea() + "\nNumber of bathrooms: " + numberOfBathrooms + "\nHas balcony: " + hasBalcony + "\nHeating type: " + heating;
     }
 
-    @Override
-    public boolean hasPurpose(String purpose) {
-        return false;
-    }
 
     public int getNumberOfBathrooms() {
         return numberOfBathrooms;
 
     }
+
     public String getHeatingType() {
         return heating;
     }
+
     public boolean hasBalcony() {
         return hasBalcony;
     }

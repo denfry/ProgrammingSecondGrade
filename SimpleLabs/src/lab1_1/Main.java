@@ -26,7 +26,7 @@ public class Main {
             System.out.println("Нужно ли вывести полную информацию? (да/нет)");
             String response_smallest = scanner.nextLine();
             if (response_smallest.equals("да")) {
-                System.out.println(smallestResidentialRoom);
+                System.out.println(smallestResidentialRoom.getDescription());
             }
 
         } else {
@@ -46,9 +46,7 @@ public class Main {
                 System.out.println("Нужно ли вывести полную информацию? (да/нет)");
                 String response = scanner.nextLine();
                 if (response.equals("да")) {
-                    System.out.println(room);
-                } else {
-                    System.out.println("Программа завершена.");
+                    System.out.println(room.getDescription());
                 }
             }
         } else {

@@ -2,6 +2,7 @@ package lab1_1;
 
 public class NonResidentialRoom extends Room {
     private String purpose;
+
     public NonResidentialRoom(String name, double area, String purpose) {
         super(name, area);
         this.purpose = purpose;
@@ -23,7 +24,7 @@ public class NonResidentialRoom extends Room {
     }
 
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return "Нежилое помещение: " + getName() + "\nПлощадь: " + getArea() + " кв. м" + "\nНазначение: " + purpose;
     }
 }
