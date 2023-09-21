@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Room> rooms = new ArrayList<>();
+        System.out.println("Реализация через абстрактный класс:");
         rooms.add(new ResidentialRoom("Спальня", 20.5, 1));
         rooms.add(new ResidentialRoom("Гостиная", 30.0, 0));
         rooms.add(new ResidentialRoom("Детская", 15.0, 2));

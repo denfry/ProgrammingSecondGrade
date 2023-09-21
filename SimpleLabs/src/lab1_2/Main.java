@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<IRoom> rooms = new ArrayList<>();
-
+        System.out.println("Реализация через интерфейс:");
         rooms.add(new ResidentialRoom("Спальня", 20.5, 1, true, "Центральное"));
         rooms.add(new ResidentialRoom("Гостиная", 30.0, 0, false, "Электрическое"));
         rooms.add(new ResidentialRoom("Детская", 15.0, 2, false, "Нет"));
