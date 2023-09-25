@@ -27,6 +27,7 @@ public class NonResidentialRoom implements IRoom {
 
     @Override
     public String getDescription() {
-        return "Нежилое помещение: " + getName() + "\nПлощадь: " + getArea() + " кв. м" + "\nНазначение: " + purpose;
+        return "Нежилое помещение: " + getName() + "\nПлощадь: " + getArea() +
+                " кв. м" + "\nНазначение: " + purpose;
     }
 }
