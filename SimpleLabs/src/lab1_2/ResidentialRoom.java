@@ -28,7 +28,8 @@ public class ResidentialRoom implements IRoom {
 
     @Override
     public String getDescription() {
-        return "Room name: " + getName() + "\nArea: " + getArea() + "\nNumber of bathrooms: " + numberOfBathrooms + "\nHas balcony: " + hasBalcony + "\nHeating type: " + heating;
+        return "Room name: " + getName() + "\nArea: " + getArea() + "\nNumber of bathrooms: " + numberOfBathrooms +
+                "\nHas balcony: " + hasBalcony + "\nHeating type: " + heating;
     }
 
 

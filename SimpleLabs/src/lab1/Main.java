@@ -46,8 +46,6 @@ public class Main {
                 String response = scanner.nextLine();
                 if (response.equals("да")) {
                     System.out.println(room);
-                } else {
-                    System.out.println("Программа завершена.");
                 }
             }
         } else {
