@@ -23,29 +23,47 @@ public class ProductAnalysis {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("    Анализ продукции");
-
-        System.out.println("Продукция\tПроцент брака, %");
+        System.out.println("            Анализ продукции");
+        System.out.println("+-----------------+--------------------+");
+        System.out.println("|    Продукция    |  Процент брака, %  |");
+        System.out.println("+-----------------+--------------------+");
         for (Product product : products) {
-            System.out.println(product.getName() + "\t\t" + product.getDefectPercentage());
+            String productName = product.name();
+            String defectPercentage = product.defectPercentage() + "%";
+
+            productName = String.format("%-15s", productName);
+            defectPercentage = String.format("%-18s", defectPercentage);
+
+            System.out.println("| " + productName + " | " + defectPercentage + " |");
         }
+        System.out.println("+-----------------+--------------------+");
 
 
-        Collections.sort(products, Comparator.comparing(Product::getDefectPercentage).reversed());
+        products.sort(Comparator.comparing(Product::defectPercentage).reversed());
 
 
-        System.out.println("\nНаибольший процент брака:");
+        System.out.println("\n       Наибольший процент брака");
+        System.out.println("+-------------------+-------------------+");
+        System.out.println("|      Продукт      |   Процент брака   |");
+        System.out.println("+-------------------+-------------------+");
         for (int i = 0; i < Math.min(2, products.size()); i++) {
             Product product = products.get(i);
-            System.out.println(product.getName() + ": " + product.getDefectPercentage() + "%");
+            String productName = product.name();
+            String defectPercentage = product.defectPercentage() + "%";
+
+            productName = String.format("%-17s", productName);
+            defectPercentage = String.format("%-17s", defectPercentage);
+
+            System.out.println("| " + productName + " | " + defectPercentage + " |");
         }
+        System.out.println("+-------------------+-------------------+");
 
 
         try (PrintWriter writer = new PrintWriter("output_for_lab2_2.txt")) {
             writer.println("Наибольший процент брака:");
             for (int i = 0; i < Math.min(2, products.size()); i++) {
                 Product product = products.get(i);
-                writer.println(product.getName() + ": " + product.getDefectPercentage() + "%");
+                writer.println(product.name() + ": " + product.defectPercentage() + "%");
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

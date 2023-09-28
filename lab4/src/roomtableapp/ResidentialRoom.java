@@ -1,11 +1,13 @@
+package roomtableapp;
+
 public class ResidentialRoom extends Room {
     private final int numberOfBathrooms;
     private final boolean balcony;
     private final String heating;
 
-    public ResidentialRoom(String name, double area, int numberOfBedrooms, boolean balcony, String heating) {
+    public ResidentialRoom(String name, double area, int numberOfBathrooms, boolean balcony, String heating) {
         super(name, area);
-        this.numberOfBathrooms = numberOfBedrooms;
+        this.numberOfBathrooms = numberOfBathrooms;
         this.balcony = balcony;
         this.heating = heating;
     }

@@ -1,3 +1,5 @@
+package roomtableapp;
+
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -6,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import roomtableapp.ResidentialRoom;
 
 import java.util.Comparator;
 
@@ -14,7 +17,7 @@ public class RoomTableApp extends Application {
     private final ObservableList<Room> rooms = FXCollections.observableArrayList();
 
     public static void main(String[] args) {
-        launch(args);
+        Application.launch(args);
     }
 
     @Override

@@ -27,7 +27,7 @@ public class Lab2_1 {
             bufferedReader.close();
 
 
-            FileWriter fileWriter = new FileWriter("output.txt");
+            FileWriter fileWriter = new FileWriter("output_2_1.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             int k = 0;
@@ -42,7 +42,10 @@ public class Lab2_1 {
                     k++;
                 }
             }
-
+            //
+            if(k == 0){
+                System.out.println("Нет чисел");
+            }
 
             bufferedWriter.close();
         } catch (IOException e) {
