@@ -42,7 +42,6 @@ public class Lab2_1 {
                     k++;
                 }
             }
-            //
             if(k == 0){
                 System.out.println("Нет чисел");
             }

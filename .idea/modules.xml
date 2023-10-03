@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Lections/Lections.iml" filepath="$PROJECT_DIR$/Lections/Lections.iml" />
       <module fileurl="file://$PROJECT_DIR$/ProgrammingSecondGrade.iml" filepath="$PROJECT_DIR$/ProgrammingSecondGrade.iml" />
       <module fileurl="file://$PROJECT_DIR$/SimpleLabs/SimpleLabs.iml" filepath="$PROJECT_DIR$/SimpleLabs/SimpleLabs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lab4/lab4.iml" filepath="$PROJECT_DIR$/lab4/lab4.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lections/lect1/lect1.iml" filepath="$PROJECT_DIR$/Lections/lect1/lect1.iml" />
       <module fileurl="file://$PROJECT_DIR$/variant_15/variant_15.iml" filepath="$PROJECT_DIR$/variant_15/variant_15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/variant_2/variant_2.iml" filepath="$PROJECT_DIR$/variant_2/variant_2.iml" />
     </modules>
   </component>
 </project>
