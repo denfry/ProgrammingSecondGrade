@@ -21,9 +21,6 @@ public abstract class Room {
         return area;
     }
 
-    public void setArea(double area) {
-        this.area = area;
-    }
 
     public abstract double calculateDecorationCost();
 

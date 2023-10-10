@@ -13,5 +13,4 @@ public abstract class PeripheralDevice {
     public double getPrice() {
         return price;
     }
-    public abstract String getType();
 }

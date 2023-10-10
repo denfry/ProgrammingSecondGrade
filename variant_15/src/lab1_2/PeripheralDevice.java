@@ -1,7 +1,7 @@
 package lab1_2;
 
 public interface PeripheralDevice {
-    String getName();
+    String getModel();
     double getPrice();
-    String getType();
+
 }
