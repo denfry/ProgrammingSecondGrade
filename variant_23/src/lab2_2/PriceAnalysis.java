@@ -50,8 +50,6 @@ public class PriceAnalysis {
 
         System.out.printf("Средняя стоимость метра ткани: %.2f руб.%n", averagePrice);
 
-        System.out.printf("%nСредняя стоимость метра ткани: %.2f руб.%n", averagePrice);
-
         // Выводим артикулы, стоимость которых превышает среднюю, в виде таблицы
         System.out.println("Артикулы, стоимость которых превышает среднюю:");
         System.out.println("+----------------------+-------------------+");
