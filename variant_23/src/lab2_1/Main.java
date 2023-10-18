@@ -30,8 +30,12 @@ public class Main {
                     foundPositiveNumber = true;
                 }
             }
-            if (!foundNonMultipleOfThree && !foundPositiveNumber) {
-                System.out.println("Нет чисел, которые не делятся на 3 и/или не положительны.");
+            if (!foundNonMultipleOfThree) {
+                System.out.println("Нет чисел, которые не делятся на 3.");
+            } else if (!foundPositiveNumber) {
+                System.out.println("Нет положительных чисел.");
+            } else {
+                System.out.println("Нет чисел, которые не делятся на 3 и не являются положительными.");
             }
         } catch (IOException e) {
             e.printStackTrace();
