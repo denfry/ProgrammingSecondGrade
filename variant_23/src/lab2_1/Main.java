@@ -32,22 +32,22 @@ public class Main {
             }
             if (!foundNonMultipleOfThree) {
                 System.out.println("Нет чисел, которые не делятся на 3.");
-            } else if (!foundPositiveNumber) {
+            } else {
+                System.out.println("Множество чисел, не кратных 3:");
+                System.out.println(notMultipleOfThreeSet);
+                System.out.println("Количество элементов: " + notMultipleOfThreeSet.size());
+            }
+            if (!foundPositiveNumber) {
                 System.out.println("Нет положительных чисел.");
             } else {
-                System.out.println("Нет чисел, которые не делятся на 3 и не являются положительными.");
+                System.out.println("\nМножество положительных чисел:");
+                System.out.println(positiveNumbersSet);
+                System.out.println("Количество элементов: " + positiveNumbersSet.size());
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Множество чисел, не кратных 3:");
-        System.out.println(notMultipleOfThreeSet);
-        System.out.println("Количество элементов: " + notMultipleOfThreeSet.size());
-
-        System.out.println("\nМножество положительных чисел:");
-        System.out.println(positiveNumbersSet);
-        System.out.println("Количество элементов: " + positiveNumbersSet.size());
 
         try (PrintWriter writer = new PrintWriter("output_2_1.txt")) {
             writer.println("Множество чисел, не кратных 3:");
