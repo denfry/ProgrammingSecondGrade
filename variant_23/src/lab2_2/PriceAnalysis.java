@@ -11,7 +11,7 @@ public class PriceAnalysis {
 
         ArrayList<PriceData> priceDataList = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("variant_23/src/lab2_2/input.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("input_2_2.txt"))) {
 
             String line;
             while ((line = reader.readLine()) != null) {
@@ -65,7 +65,7 @@ public class PriceAnalysis {
         System.out.println("+----------------------+-------------------+");
 
         // Записываем артикулы, стоимость которых превышает среднюю, в файл
-        try (FileWriter writer = new FileWriter("variant_23/src/lab2_2/output.txt")) {
+        try (FileWriter writer = new FileWriter("output_2_2.txt")) {
             writer.write("Артикулы, стоимость которых превышает среднюю:\n");
             writer.write("+----------------------+-------------------+\n");
             writer.write("|   Артикул ткани      | Цена за метр, руб.|\n");

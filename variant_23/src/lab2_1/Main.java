@@ -12,18 +12,26 @@ public class Main {
         Set<Integer> notMultipleOfThreeSet = new HashSet<>();
         Set<Integer> positiveNumbersSet = new HashSet<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("variant_23/src/lab2_1/input.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("input_2_1.txt"))) {
             String line;
+            boolean foundNonMultipleOfThree = false;
+            boolean foundPositiveNumber = false;
+
             while ((line = reader.readLine()) != null) {
                 int number = Integer.parseInt(line);
 
                 if (number % 3 != 0) {
                     notMultipleOfThreeSet.add(number);
+                    foundNonMultipleOfThree = true;
                 }
 
                 if (number > 0) {
                     positiveNumbersSet.add(number);
+                    foundPositiveNumber = true;
                 }
+            }
+            if (!foundNonMultipleOfThree && !foundPositiveNumber) {
+                System.out.println("Нет чисел, которые не делятся на 3 и/или не положительны.");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -37,7 +45,7 @@ public class Main {
         System.out.println(positiveNumbersSet);
         System.out.println("Количество элементов: " + positiveNumbersSet.size());
 
-        try (PrintWriter writer = new PrintWriter("variant_23/src/lab2_1/output.txt")) {
+        try (PrintWriter writer = new PrintWriter("output_2_1.txt")) {
             writer.println("Множество чисел, не кратных 3:");
             writer.println(notMultipleOfThreeSet);
             writer.println("Количество элементов: " + notMultipleOfThreeSet.size());
