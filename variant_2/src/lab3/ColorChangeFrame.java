@@ -2,13 +2,11 @@ package lab3;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class ColorChangeFrame extends javax.swing.JFrame {
-    private JPanel colorPanel;
-    private JComboBox<String> colorComboBox;
+    private final JPanel colorPanel;
+    private final JComboBox<String> colorComboBox;
 
     public ColorChangeFrame() {
         super("Color Change");
@@ -19,12 +17,7 @@ public class ColorChangeFrame extends javax.swing.JFrame {
 
         String[] colorNames = {"RED", "GREEN", "BLUE", "YELLOW", "BLACK", "WHITE", "PINK", "ORANGE"};
         colorComboBox = new JComboBox<>(colorNames);
-        colorComboBox.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                changeColor();
-            }
-        });
+        colorComboBox.addActionListener(e -> changeColor());
         setLayout(new BorderLayout());
 
         add(colorPanel, BorderLayout.CENTER);
@@ -65,11 +58,6 @@ public class ColorChangeFrame extends javax.swing.JFrame {
         }
     }
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new ColorChangeFrame();
-            }
-        });
+        SwingUtilities.invokeLater(ColorChangeFrame::new);
     }
 }
