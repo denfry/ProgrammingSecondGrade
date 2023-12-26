@@ -1,18 +1,10 @@
 package lab1_2;
 
-public class Paint implements IBuildingmaterials {
-
-    private String type;
-    private String brand;
-    private double price;
-    private int sum;
+public class Paint extends Buildingmaterials {
     private int volume;
 
     public Paint(String type, String brand, double price, int sum, int volume) {
-        this.type = type;
-        this.brand = brand;
-        this.price = price;
-        this.sum = sum;
+        super(type, brand, price, sum);
         this.volume = volume;
     }
 
@@ -20,28 +12,14 @@ public class Paint implements IBuildingmaterials {
         return volume;
     }
 
-    @Override
-    public String getType() {
-        return type;
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 
-    @Override
-    public String getBrand() {
-        return brand;
-    }
 
     @Override
-    public double getPrice() {
-        return price;
+    public String toString() {
+        return "Тип - " + getType() + "; производитель - " + getBrand() + "; цена - " + getPrice() + "; количество - " + getSum() + "; объем - " + volume + "\n";
     }
 
-    @Override
-    public int getSum() {
-        return sum;
-    }
-
-    @Override
-    public String getDescription() {
-        return "Type: " + type + ", brand: " + brand + ", price: " + price + ", sum: " + sum + ", volume: " + volume + "\n";
-    }
 }

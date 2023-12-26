@@ -1,17 +1,10 @@
 package lab1_2;
 
-public class Wallpaper implements IBuildingmaterials {
-    private String type;
-    private String brand;
-    private double price;
-    private int sum;
+public class Wallpaper extends Buildingmaterials {
     private String kind;
 
     public Wallpaper(String type, String brand, double price, int sum, String kind) {
-        this.type = type;
-        this.brand = brand;
-        this.price = price;
-        this.sum = sum;
+        super(type, brand, price, sum);
         this.kind = kind;
     }
 
@@ -20,29 +13,11 @@ public class Wallpaper implements IBuildingmaterials {
         return kind;
     }
 
-
-    @Override
-    public String getType() {
-        return type;
+    public void setKind(String kind) {
+        this.kind = kind;
     }
 
-    @Override
-    public String getBrand() {
-        return brand;
-    }
-
-    @Override
-    public double getPrice() {
-        return price;
-    }
-
-    @Override
-    public int getSum() {
-        return sum;
-    }
-
-    @Override
-    public String getDescription() {
-        return "Type: " + type + ", brand: " + brand + ", price: " + price + ", sum: " + sum + ", kind: " + kind + "\n";
+    public String toString() {
+        return "Тип товара - " + getType() + "; производитель - " + getBrand() + "; цена - " + getPrice() + "; количество - " + getSum() + "; вид - " + kind + "\n";
     }
 }

@@ -45,12 +45,17 @@ public class Main {
         System.out.println("в категории обоев - " + (maxPriceIndex2 + 1) + ". " + se[maxPriceIndex2].getDescription());
 
         System.out.println("Виниловые обои:");
+        boolean found = false;
         for (int i = 0; i < poz; i++) {
             if (se[i] instanceof Wallpaper) {
                 if (((Wallpaper) se[i]).getKind().equals("виниловые")) {
                     System.out.println(i + 1 + ". " + se[i].getDescription());
+                    found = true;
                 }
             }
+        }
+        if (!found) {
+            System.out.println("Нет подходящих обоев.");
         }
     }
 }

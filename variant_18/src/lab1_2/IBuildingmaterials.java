@@ -10,7 +10,5 @@ public interface IBuildingmaterials {
 
     int getSum();
 
-    String getDescription();
-
 }
 
